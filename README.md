@@ -1,4 +1,4 @@
-# adventjs-2022
+# adventjs 2022
 
 What is an advent?
 
