@@ -29,18 +29,13 @@ const gifts = ["book", "game", "socks", "station"];
 const wrapped = [wrapping(gifts)];
 
 function wrapping(gifts) {
-  let wrappedGifts = [];
-  for (let i = 0; i < gifts.length; i++) {
-    wrappedGifts.push(
-      "*".repeat(gifts[i].length + 2) +
-        "\n" +
-        "*" +
-        gifts[i] +
-        "*" +
-        "\n" +
-        "*".repeat(gifts[i].length + 2)
-    );
-  }
-  return wrappedGifts;
+  const wrap = (gift) => {
+    return [
+      "*".repeat(gift.length + 2),
+      `*${gift}*`,
+      "*".repeat(gift.length + 2),
+    ].join("\n");
+  };
+  return gifts.map(wrap);
 }
 console.log(wrapped);
